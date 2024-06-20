@@ -1,0 +1,251 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cart-menu {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+    background: rgba(51, 51, 51, 0.8); 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cart-menu .fa-shopping-cart {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.cart-count {
+    background: orange;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    transform: translate(50%, -50%);
+}
+
+.cart-count.visible {
+    display: inline-block;
+}
+
+.cart-count.hidden {
+    display: none;
+}
+
+main {
+    margin-top: 60px; 
+    padding: 1em;
+}
+
+section {
+    margin: 2em 0;
+}
+
+.about-section, .mission-section, .story-section, .apart-section, .contact-section {
+    padding: 2em;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    padding-right: 1em;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 2;
+    text-align: center;
+}
+
+.mission-content {
+    display: flex;
+    align-items: center;
+}
+
+.mission-content p {
+    flex: 2;
+}
+
+.mission-image {
+    flex: 1;
+    padding-left: 1em;
+}
+
+.mission-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.story-content, .apart-content {
+    display: flex;
+    align-items: center;
+}
+
+.story-image {
+    flex: 1;
+    padding: 1em;
+}
+
+.story-text, .apart-text {
+    flex: 2;
+    padding: 1em;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 1em 2em;
+    background: #ff6600;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background: #e65c00;
+    transition: background 0.3s ease;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(51, 51, 51, 0.9);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+    .about-content, .story-content, .apart-content, .mission-content {
+        flex-direction: column;
+    }
+
+    .about-text, .story-text, .apart-text, .mission-content p {
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    .about-image, .mission-image {
+        padding: 0;
+    }
+
+    .about-image img, .mission-image img, .story-image img {
+        width: 80%;
+        height: auto;
+        max-height: 200px; 
+        object-fit: cover; 
+        aspect-ratio: 1 / 1; 
+        border-radius: 10px;
+        margin: auto; 
+    }
+}
